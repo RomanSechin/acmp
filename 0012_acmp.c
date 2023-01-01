@@ -50,8 +50,10 @@ int sign(long long x,long long y, long long x1, long long y1, long long x2, long
 }
 int main()
 {
-  FILE * in = fopen("input.txt", "r"); if(in == NULL){ printf("Can't open input.txt"); return 0;} 
-  FILE * out = fopen("output.txt", "w"); if(out == NULL){ printf("Can't open output.txt"); return 0;} 
+	FILE * in = fopen("input.txt", "r");
+    if(in == NULL){printf("Can't open file input.txt!"); return 0;}
+    FILE * out = fopen("output.txt", "w");
+    if(out == NULL){ printf("Can't open file output.txt!"); fclose(in); return 0; }
  
   long long x[5], y[5];
   int count = 0, ans = 0;

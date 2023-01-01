@@ -37,8 +37,10 @@ char * cmp_strings(char * str1, char * str2)
  
 int main()
 {
-    FILE *in = fopen("INPUT.TXT", "r");
-    FILE *out = fopen("OUTPUT.TXT", "w");
+	FILE * in = fopen("input.txt", "r");
+    if(in == NULL){printf("Can't open file input.txt!"); return 0;}
+    FILE * out = fopen("output.txt", "w");
+    if(out == NULL){ printf("Can't open file output.txt!"); fclose(in); return 0; }
  
     if(in ==  NULL || out == NULL)
     {
