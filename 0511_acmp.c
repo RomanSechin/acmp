@@ -23,10 +23,9 @@
  
 int main()
 {
-    FILE * in = fopen("input.txt", "r");
-   // FILE * out = fopen("output.txt", "w");
-    FILE * out = stdout;
- 
+    FILE * in = fopen("input.txt", "r"); if(in == NULL){ printf("Can't open input.txt"); return 0;} 
+    FILE * out = fopen("output.txt", "w"); if(out == NULL){ printf("Can't open output.txt"); return 0;} 
+    
     int n = 0;
  
     fscanf(in, "%d", &n);
